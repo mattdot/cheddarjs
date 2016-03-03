@@ -39,7 +39,12 @@ function(value, currency) {
 
 		Object.freeze(this);
 	};
-
+	
+	/*
+	 * Formats the currency according to the locale's rules
+	 * @param {string} locale A string representing the locale (i.e. 'en-US')
+	 * @param {object} options An object representing options to use formatting the currency
+	 */
 	Cheddar.prototype.toLocaleString = function() {
 		var locale = (arguments.length && typeof arguments[0] === 'string' ? arguments[0] : null);
 		var formatOptions = (arguments.length && typeof arguments[arguments.length-1] === 'object' ? arguments[arguments.length-1] : {});
@@ -49,6 +54,9 @@ function(value, currency) {
 		return this.currency.symbol + ((this.value % 1 !== 0)? this.value.toFixed(this.currency.precision) : this.value.toFixed(0));		
 	};
 
+	/*
+  	 * Formats the currency according to the 'current' locale
+	 */
 	Cheddar.prototype.toString = function() {
 		var defaultLocale = "en-US"; //todo: figure out the right place to get the default
 
@@ -60,6 +68,9 @@ function(value, currency) {
 		return this.value;
 	};
 
+	/*
+  	 * Adds two currencies together
+	 */
 	Cheddar.prototype.add = function(amount) {
 		var v = 0;
 		if(typeof amount === 'object') {
