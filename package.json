@@ -1,0 +1,27 @@
+{
+  "name": "cheddarjs",
+  "version": "0.1.0",
+  "description": "Javascript library for formatting currency.",
+  "main": "src/cheddar.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattdot/cheddarjs.git"
+  },
+  "keywords": [
+    "currency",
+    "money",
+    "formatting",
+    "iso4217"
+  ],
+  "author": "Matt Dotson <matt@bizglue.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattdot/cheddarjs/issues"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
