@@ -1,6 +1,6 @@
 {
   "name": "cheddarjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Javascript library for formatting currency.",
   "main": "src/cheddar.js",
   "scripts": {
